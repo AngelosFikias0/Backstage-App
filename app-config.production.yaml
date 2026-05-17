@@ -21,10 +21,11 @@ backend:
       password: ${POSTGRES_PASSWORD}
 
 auth:
-  environment: production
+  environment: development
   providers:
-    guest: {}
-
+    guest:
+      dangerouslyAllowOutsideDevelopment: true
+      
 catalog:
   locations:
     - type: file
